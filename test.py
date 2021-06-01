@@ -4,8 +4,13 @@ from webdriver_manager.chrome import ChromeDriverManager
 from time import sleep
 while True:
     driver = webdriver.Chrome(executable_path='C:\\chromedriver')
-    driver.get('https://www.youtube.com')
+    driver.get('https://www.twitter.com')
     driver.maximize_window()
-    
-    sleep(3)
+    # driver.getCurrentUrl()
+    sleep(5)
+    email=driver.find_elements_by_name("session[username_or_email]")
+    password=driver.find_elements_by_name("session[password]")
+
+    sleep(10)
     driver.close()
+
